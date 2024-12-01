@@ -17,11 +17,16 @@ private readonly AppDbContext _context;
         return rota;
     }
 
+    public async Task<Rota> GetById(int id) => await _context.Rotas
+                             .FirstOrDefaultAsync(p => p.Id == id);
+
     public async Task<IEnumerable<Rota>> GetByOrginDestiny(string origem, string destino)
     {
-        return await _context.Rotas
-                             .Where(x => x.Origem == origem && x.Destino == destino)
+        var result = await _context.Rotas
+                             .Where(x => x.Origem.ToLower() == origem.ToLower() && x.Destino.ToLower() == destino.ToLower())
                              .ToListAsync();
+
+        return result;
     }
 
     public async Task<Rota> RemoveAsync(Rota rota)

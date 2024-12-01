@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RotaViagem.Application\RotaViagem.Application.csproj" />
     <ProjectReference Include="..\RotaViagem.Infra.Data\RotaViagem.Infra.Data.csproj" />
   </ItemGroup>
 

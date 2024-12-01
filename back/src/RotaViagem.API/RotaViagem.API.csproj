@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RotaViagem.Application\RotaViagem.Application.csproj" />
     <ProjectReference Include="..\RotaViagem.Infra.IoC\RotaViagem.Infra.IoC.csproj" />
   </ItemGroup>
 
