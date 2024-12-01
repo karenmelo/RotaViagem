@@ -18,7 +18,6 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../rota.db");
-        optionsBuilder.UseSqlite($"Data Source={dbPath}")
-                      .LogTo(Console.WriteLine);
+        optionsBuilder.UseSqlite($"Data Source={dbPath}");
     }
 }
